@@ -1,0 +1,609 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/docpad/docpad">docpad (v6.79.4)</a>
+</h1>
+<h4>DocPad is a dynamic static site generator. Write your content as files, or import your content from other external sources. Render the content with plugins. And deploy your static or dynamic website to your favourite hosting provider.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.docpad">module docpad</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">docpad.</span>usingDomains</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.docpad.EventEmitter">
+            function <span class="apidocSignatureSpan">docpad.</span>EventEmitter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.docpad.__super__.constructor">
+            function <span class="apidocSignatureSpan">docpad.</span>__super__.constructor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.docpad.create">
+            function <span class="apidocSignatureSpan">docpad.</span>create
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.docpad.createInstance">
+            function <span class="apidocSignatureSpan">docpad.</span>createInstance
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.docpad.init">
+            function <span class="apidocSignatureSpan">docpad.</span>init
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.docpad.listenerCount">
+            function <span class="apidocSignatureSpan">docpad.</span>listenerCount
+            <span class="apidocSignatureSpan">(emitter, type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.docpad.require">
+            function <span class="apidocSignatureSpan">docpad.</span>require
+            <span class="apidocSignatureSpan">(relativePath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">docpad.</span>defaultMaxListeners</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">docpad.</span>__super__</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.docpad.__super__">module docpad.__super__</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.docpad.__super__.constructor">
+            function <span class="apidocSignatureSpan">docpad.__super__.</span>constructor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.docpad.__super__.emitParallel">
+            function <span class="apidocSignatureSpan">docpad.__super__.</span>emitParallel
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.docpad.__super__.emitSerial">
+            function <span class="apidocSignatureSpan">docpad.__super__.</span>emitSerial
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.docpad.__super__.getListenerGroup">
+            function <span class="apidocSignatureSpan">docpad.__super__.</span>getListenerGroup
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.docpad.__super__.off">
+            function <span class="apidocSignatureSpan">docpad.__super__.</span>off
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.docpad.__super__.constructor">module docpad.__super__.constructor</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">docpad.__super__.constructor.</span>usingDomains</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.docpad.__super__.constructor.constructor">
+            function <span class="apidocSignatureSpan">docpad.__super__.</span>constructor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.docpad.__super__.constructor.EventEmitter">
+            function <span class="apidocSignatureSpan">docpad.__super__.constructor.</span>EventEmitter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.docpad.__super__.constructor.init">
+            function <span class="apidocSignatureSpan">docpad.__super__.constructor.</span>init
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.docpad.__super__.constructor.listenerCount">
+            function <span class="apidocSignatureSpan">docpad.__super__.constructor.</span>listenerCount
+            <span class="apidocSignatureSpan">(emitter, type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">docpad.__super__.constructor.</span>defaultMaxListeners</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">docpad.__super__.constructor.</span>__super__</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.docpad" id="apidoc.module.docpad">module docpad</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.docpad.EventEmitter" id="apidoc.element.docpad.EventEmitter">
+        function <span class="apidocSignatureSpan">docpad.</span>EventEmitter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.docpad.__super__.constructor" id="apidoc.element.docpad.__super__.constructor">
+        function <span class="apidocSignatureSpan">docpad.</span>__super__.constructor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitterGrouped() {
+  return EventEmitterGrouped.__super__.constructor.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.docpad.create" id="apidoc.element.docpad.create">
+        function <span class="apidocSignatureSpan">docpad.</span>create
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function () {
+  var args;
+  args = 1 &lt;= arguments.length ? slice.call(arguments, 0) : [];
+  return (function(func, args, ctor) {
+    ctor.prototype = func.prototype;
+    var child = new ctor, result = func.apply(child, args);
+    return Object(result) === result ? result : child;
+  })(this, args, function(){});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.docpad.createInstance" id="apidoc.element.docpad.createInstance">
+        function <span class="apidocSignatureSpan">docpad.</span>createInstance
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createInstance = function () {
+  var args;
+  args = 1 &lt;= arguments.length ? slice.call(arguments, 0) : [];
+  return (function(func, args, ctor) {
+    ctor.prototype = func.prototype;
+    var child = new ctor, result = func.apply(child, args);
+    return Object(result) === result ? result : child;
+  })(this, args, function(){});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.docpad.init" id="apidoc.element.docpad.init">
+        function <span class="apidocSignatureSpan">docpad.</span>init
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function () {
+  this.domain = null;
+  if (EventEmitter.usingDomains) {
+    // if there is an active domain, then attach to it.
+    domain = domain || require('domain');
+    if (domain.active &amp;&amp; !(this instanceof domain.Domain)) {
+      this.domain = domain.active;
+    }
+  }
+
+  if (!this._events || this._events === Object.getPrototypeOf(this)._events) {
+    this._events = new EventHandlers();
+    this._eventsCount = 0;
+  }
+
+  this._maxListeners = this._maxListeners || undefined;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.docpad.listenerCount" id="apidoc.element.docpad.listenerCount">
+        function <span class="apidocSignatureSpan">docpad.</span>listenerCount
+        <span class="apidocSignatureSpan">(emitter, type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listenerCount = function (emitter, type) {
+  if (typeof emitter.listenerCount === 'function') {
+    return emitter.listenerCount(type);
+  } else {
+    return listenerCount.call(emitter, type);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.docpad.require" id="apidoc.element.docpad.require">
+        function <span class="apidocSignatureSpan">docpad.</span>require
+        <span class="apidocSignatureSpan">(relativePath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">require = function (relativePath) {
+  var absolutePath;
+  absolutePath = pathUtil.normalize(pathUtil.join(__dirname, relativePath));
+  if (absolutePath.replace(__dirname, '') === absolutePath) {
+    throw new Error("docpad.require is limited to local docpad files only: " + relativePath);
+  }
+  return require(absolutePath);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.docpad.__super__" id="apidoc.module.docpad.__super__">module docpad.__super__</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.docpad.__super__.constructor" id="apidoc.element.docpad.__super__.constructor">
+        function <span class="apidocSignatureSpan">docpad.__super__.</span>constructor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitterGrouped() {
+  return EventEmitterGrouped.__super__.constructor.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.docpad.__super__.emitParallel" id="apidoc.element.docpad.__super__.emitParallel">
+        function <span class="apidocSignatureSpan">docpad.__super__.</span>emitParallel
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">emitParallel = function () {
+  var args;
+  args = 1 &lt;= arguments.length ? __slice.call(arguments, 0) : [];
+  return this.getListenerGroup.apply(this, args).setConfig({
+    concurrency: 0
+  }).run();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.docpad.__super__.emitSerial" id="apidoc.element.docpad.__super__.emitSerial">
+        function <span class="apidocSignatureSpan">docpad.__super__.</span>emitSerial
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">emitSerial = function () {
+  var args;
+  args = 1 &lt;= arguments.length ? __slice.call(arguments, 0) : [];
+  return this.getListenerGroup.apply(this, args).run();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.docpad.__super__.getListenerGroup" id="apidoc.element.docpad.__super__.getListenerGroup">
+        function <span class="apidocSignatureSpan">docpad.__super__.</span>getListenerGroup
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getListenerGroup = function () {
+  var args, eventName, listenerObjects, me, next, tasks, _i;
+  eventName = arguments[0], args = 3 &lt;= arguments.length ? __slice.call(arguments, 1, _i = arguments.length - 1) : (_i = 1, []),
+next = arguments[_i++];
+  me = this;
+  tasks = new TaskGroup("EventEmitterGrouped for " + eventName).done(next);
+  listenerObjects = this.listeners(eventName).slice().map(function(listener) {
+    var listenerObject;
+    listenerObject = {};
+    if (listener.listener) {
+      listenerObject.actual = listener.listener;
+      listenerObject.fire = [listener.bind(me), listener.listener];
+    } else {
+      listenerObject.actual = listener;
+      listenerObject.fire = listener.bind(me);
+    }
+    listenerObject.priority = listenerObject.actual.priority || 0;
+    listenerObject.name = listenerObject.name || ("Untitled listener for [" + eventName + "] with priority [" + listenerObject.priority
+ + "]");
+    return listenerObject;
+  });
+  listenerObjects.sort(function(a, b) {
+    return b.priority - a.priority;
+  });
+  listenerObjects.forEach(function(listenerObject) {
+    return tasks.addTask(listenerObject.name, function(complete) {
+      return ambi.apply(null, [listenerObject.fire].concat(__slice.call(args), [complete]));
+    });
+  });
+  return tasks;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.docpad.__super__.off" id="apidoc.element.docpad.__super__.off">
+        function <span class="apidocSignatureSpan">docpad.__super__.</span>off
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">off = function () {
+  var args;
+  args = 1 &lt;= arguments.length ? __slice.call(arguments, 0) : [];
+  return this.removeListener.apply(this, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.docpad.__super__.constructor" id="apidoc.module.docpad.__super__.constructor">module docpad.__super__.constructor</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.docpad.__super__.constructor.constructor" id="apidoc.element.docpad.__super__.constructor.constructor">
+        function <span class="apidocSignatureSpan">docpad.__super__.</span>constructor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Function() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.docpad.__super__.constructor.EventEmitter" id="apidoc.element.docpad.__super__.constructor.EventEmitter">
+        function <span class="apidocSignatureSpan">docpad.__super__.constructor.</span>EventEmitter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.docpad.__super__.constructor.init" id="apidoc.element.docpad.__super__.constructor.init">
+        function <span class="apidocSignatureSpan">docpad.__super__.constructor.</span>init
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function () {
+  this.domain = null;
+  if (EventEmitter.usingDomains) {
+    // if there is an active domain, then attach to it.
+    domain = domain || require('domain');
+    if (domain.active &amp;&amp; !(this instanceof domain.Domain)) {
+      this.domain = domain.active;
+    }
+  }
+
+  if (!this._events || this._events === Object.getPrototypeOf(this)._events) {
+    this._events = new EventHandlers();
+    this._eventsCount = 0;
+  }
+
+  this._maxListeners = this._maxListeners || undefined;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.docpad.__super__.constructor.listenerCount" id="apidoc.element.docpad.__super__.constructor.listenerCount">
+        function <span class="apidocSignatureSpan">docpad.__super__.constructor.</span>listenerCount
+        <span class="apidocSignatureSpan">(emitter, type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listenerCount = function (emitter, type) {
+  if (typeof emitter.listenerCount === 'function') {
+    return emitter.listenerCount(type);
+  } else {
+    return listenerCount.call(emitter, type);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
