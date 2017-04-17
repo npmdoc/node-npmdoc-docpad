@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/docpad/docpad"
-
-    >docpad (v6.79.4)</a>
+    <a href="https://github.com/docpad/docpad">docpad (v6.79.4)</a>
 </h1>
 <h4>DocPad is a dynamic static site generator. Write your content as files, or import your content from other external sources. Render the content with plugins. And deploy your static or dynamic website to your favourite hosting provider.</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.docpad">module docpad</a><ol>
 
@@ -483,7 +476,7 @@
       var tasks;
       _Class.__super__.constructor.apply(this, arguments);
       tasks = this;
-      tasks.on(&#x27;started&#x27;, function() {
+      tasks.on('started', function() {
         var config, name, progress, totals;
         config = tasks.getConfig();
         name = tasks.getNames();
@@ -492,10 +485,10 @@
           totals = tasks.getItemTotals();
           return progress.step(name).total(totals.total).setTick(totals.completed);
         } else {
-          return docpad.log(&#x27;debug&#x27;, name + &#x27; &#x3e; started&#x27;);
+          return docpad.log('debug', name + ' &gt; started');
         }
       });
-      tasks.on(&#x27;item.add&#x27;, function(item) {
+      tasks.on('item.add', function(item) {
         var config, name, progress, totals;
         config = tasks.getConfig();
         name = item.getNames();
@@ -504,10 +497,10 @@
           totals = tasks.getItemTotals();
           return progress.step(name).total(totals.total).setTick(totals.completed);
         } else {
-          return docpad.log(&#x27;debug&#x27;, name + &#x27; &#x3e; added&#x27;);
+          return docpad.log('debug', name + ' &gt; added');
         }
       });
-      tasks.on(&#x27;item.started&#x27;, function(item) {
+      tasks.on('item.started', function(item) {
         var config, name, progress, totals;
         config = tasks.getConfig();
         name = item.getNames();
@@ -516,10 +509,10 @@
           totals = tasks.getItemTotals();
           return progress.step(name).total(totals.total).setTick(totals.completed);
         } else {
-          return docpad.log(&#x27;debug&#x27;, name + &#x27; &#x3e; started&#x27;);
+          return docpad.log('debug', name + ' &gt; started');
         }
       });
-      tasks.on(&#x27;item.done&#x27;, function(item, err) {
+      tasks.on('item.done', function(item, err) {
         var config, name, progress, totals;
         config = tasks.getConfig();
         name = item.getNames();
@@ -528,7 +521,7 @@
           totals = tasks.getItemTotals();
           return progress.step(name).total(totals.total).setTick(totals.completed);
         } else {
-          return docpad.log(&#x27;debug&#x27;, name + &#x27; &#x3e; done&#x27;);
+          return docpad.log('debug', name + ' &gt; done');
         }
       });
       this;
@@ -537,9 +530,9 @@
     return _Class;
 
   })(TaskGroup);
-  ref3 = &#x22;action\nlog warn error fatal inspector notify track identify subscribe checkRequest\nserverMiddlewareRouter serverMiddlewareHeader
- serverMiddleware404 serverMiddleware500\ndestroyWatchers&#x22;.split(/\s+/);
-  for (i = 0, len = ref3.length; i &#x3c; len; i++) {
+  ref3 = "action\nlog warn error fatal inspector notify track identify subscribe checkRequest\nserverMiddlewareRouter serverMiddlewareHeader
+ serverMiddleware404 serverMiddleware500\ndestroyWatchers".split(/\s+/);
+  for (i = 0, len = ref3.length; i &lt; len; i++) {
     methodName = ref3[i];
     this[methodName] = this[methodName].bind(this);
   }
@@ -559,14 +552,14 @@
       }
     });
   });
-  this.actionRunnerInstance = this.TaskGroup.create(&#x27;action runner&#x27;).whenDone(function(err) {
+  this.actionRunnerInstance = this.TaskGroup.create('action runner').whenDone(function(err) {
     if (err) {
       return docpad.error(err);
     }
   });
-  this.trackRunnerInstance = this.TaskGroup.create(&#x27;track runner&#x27;).whenDone(function(err) {
+  this.trackRunnerInstance = this.TaskGroup.create('track runner').whenDone(function(err) {
     var locale;
-    if (err &#x26;&#x26; docpad.getDebugging()) {
+    if (err &amp;&amp; docpad.getDebugging()) {
       locale = docpad.getLocale();
       return docpad.warn(locale.trackError, err);
     }
@@ -574,10 +567,10 @@
   if ((loggers = instanceConfig.loggers)) {
     delete instanceConfig.loggers;
   } else {
-    logger = new (require(&#x27;caterpillar&#x27;).Logger)({
+    logger = new (require('caterpillar').Logger)({
       lineOffset: 2
     });
-    loggerConsole = logger.pipe(new (require(&#x27;caterpillar-filter&#x27;).Filter)).pipe(new (require(&#x27;caterpillar-human&#x27;).Human));
+    loggerConsole = logger.pipe(new (require('caterpillar-filter').Filter)).pipe(new (require('caterpillar-human').Human));
     loggers = {
       logger: logger,
       console: loggerConsole
@@ -643,7 +636,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">__super__.emitParallel = function () {
   var args;
-  args = 1 &#x3c;= arguments.length ? __slice.call(arguments, 0) : [];
+  args = 1 &lt;= arguments.length ? __slice.call(arguments, 0) : [];
   return this.getListenerGroup.apply(this, args).setConfig({
     concurrency: 0
   }).run();
@@ -662,7 +655,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">__super__.emitSerial = function () {
   var args;
-  args = 1 &#x3c;= arguments.length ? __slice.call(arguments, 0) : [];
+  args = 1 &lt;= arguments.length ? __slice.call(arguments, 0) : [];
   return this.getListenerGroup.apply(this, args).run();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -679,10 +672,10 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">__super__.getListenerGroup = function () {
   var args, eventName, listenerObjects, me, next, tasks, _i;
-  eventName = arguments[0], args = 3 &#x3c;= arguments.length ? __slice.call(arguments, 1, _i = arguments.length - 1) : (_i = 1, []),
+  eventName = arguments[0], args = 3 &lt;= arguments.length ? __slice.call(arguments, 1, _i = arguments.length - 1) : (_i = 1, []),
 next = arguments[_i++];
   me = this;
-  tasks = new TaskGroup(&#x22;EventEmitterGrouped for &#x22; + eventName).done(next);
+  tasks = new TaskGroup("EventEmitterGrouped for " + eventName).done(next);
   listenerObjects = this.listeners(eventName).slice().map(function(listener) {
     var listenerObject;
     listenerObject = {};
@@ -694,8 +687,8 @@ next = arguments[_i++];
       listenerObject.fire = listener.bind(me);
     }
     listenerObject.priority = listenerObject.actual.priority || 0;
-    listenerObject.name = listenerObject.name || (&#x22;Untitled listener for [&#x22; + eventName + &#x22;] with priority [&#x22; + listenerObject.priority
- + &#x22;]&#x22;);
+    listenerObject.name = listenerObject.name || ("Untitled listener for [" + eventName + "] with priority [" + listenerObject.priority
+ + "]");
     return listenerObject;
   });
   listenerObjects.sort(function(a, b) {
@@ -722,7 +715,7 @@ next = arguments[_i++];
     <ul>
     <li>description and source-code<pre class="apidocCodePre">__super__.off = function () {
   var args;
-  args = 1 &#x3c;= arguments.length ? __slice.call(arguments, 0) : [];
+  args = 1 &lt;= arguments.length ? __slice.call(arguments, 0) : [];
   return this.removeListener.apply(this, args);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -739,7 +732,7 @@ next = arguments[_i++];
     <ul>
     <li>description and source-code<pre class="apidocCodePre">create = function () {
   var args;
-  args = 1 &#x3c;= arguments.length ? slice.call(arguments, 0) : [];
+  args = 1 &lt;= arguments.length ? slice.call(arguments, 0) : [];
   return (function(func, args, ctor) {
     ctor.prototype = func.prototype;
     var child = new ctor, result = func.apply(child, args);
@@ -760,7 +753,7 @@ next = arguments[_i++];
     <ul>
     <li>description and source-code<pre class="apidocCodePre">createInstance = function () {
   var args;
-  args = 1 &#x3c;= arguments.length ? slice.call(arguments, 0) : [];
+  args = 1 &lt;= arguments.length ? slice.call(arguments, 0) : [];
   return (function(func, args, ctor) {
     ctor.prototype = func.prototype;
     var child = new ctor, result = func.apply(child, args);
@@ -783,8 +776,8 @@ next = arguments[_i++];
   this.domain = null;
   if (EventEmitter.usingDomains) {
     // if there is an active domain, then attach to it.
-    domain = domain || require(&#x27;domain&#x27;);
-    if (domain.active &#x26;&#x26; !(this instanceof domain.Domain)) {
+    domain = domain || require('domain');
+    if (domain.active &amp;&amp; !(this instanceof domain.Domain)) {
       this.domain = domain.active;
     }
   }
@@ -809,7 +802,7 @@ next = arguments[_i++];
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">listenerCount = function (emitter, type) {
-  if (typeof emitter.listenerCount === &#x27;function&#x27;) {
+  if (typeof emitter.listenerCount === 'function') {
     return emitter.listenerCount(type);
   } else {
     return listenerCount.call(emitter, type);
@@ -830,8 +823,8 @@ next = arguments[_i++];
     <li>description and source-code<pre class="apidocCodePre">require = function (relativePath) {
   var absolutePath;
   absolutePath = pathUtil.normalize(pathUtil.join(__dirname, relativePath));
-  if (absolutePath.replace(__dirname, &#x27;&#x27;) === absolutePath) {
-    throw new Error(&#x22;docpad.require is limited to local docpad files only: &#x22; + relativePath);
+  if (absolutePath.replace(__dirname, '') === absolutePath) {
+    throw new Error("docpad.require is limited to local docpad files only: " + relativePath);
   }
   return require(absolutePath);
 }</pre></li>
@@ -888,7 +881,7 @@ next = arguments[_i++];
     <ul>
     <li>description and source-code<pre class="apidocCodePre">emitParallel = function () {
   var args;
-  args = 1 &#x3c;= arguments.length ? __slice.call(arguments, 0) : [];
+  args = 1 &lt;= arguments.length ? __slice.call(arguments, 0) : [];
   return this.getListenerGroup.apply(this, args).setConfig({
     concurrency: 0
   }).run();
@@ -907,7 +900,7 @@ next = arguments[_i++];
     <ul>
     <li>description and source-code<pre class="apidocCodePre">emitSerial = function () {
   var args;
-  args = 1 &#x3c;= arguments.length ? __slice.call(arguments, 0) : [];
+  args = 1 &lt;= arguments.length ? __slice.call(arguments, 0) : [];
   return this.getListenerGroup.apply(this, args).run();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -924,10 +917,10 @@ next = arguments[_i++];
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getListenerGroup = function () {
   var args, eventName, listenerObjects, me, next, tasks, _i;
-  eventName = arguments[0], args = 3 &#x3c;= arguments.length ? __slice.call(arguments, 1, _i = arguments.length - 1) : (_i = 1, []),
+  eventName = arguments[0], args = 3 &lt;= arguments.length ? __slice.call(arguments, 1, _i = arguments.length - 1) : (_i = 1, []),
 next = arguments[_i++];
   me = this;
-  tasks = new TaskGroup(&#x22;EventEmitterGrouped for &#x22; + eventName).done(next);
+  tasks = new TaskGroup("EventEmitterGrouped for " + eventName).done(next);
   listenerObjects = this.listeners(eventName).slice().map(function(listener) {
     var listenerObject;
     listenerObject = {};
@@ -939,8 +932,8 @@ next = arguments[_i++];
       listenerObject.fire = listener.bind(me);
     }
     listenerObject.priority = listenerObject.actual.priority || 0;
-    listenerObject.name = listenerObject.name || (&#x22;Untitled listener for [&#x22; + eventName + &#x22;] with priority [&#x22; + listenerObject.priority
- + &#x22;]&#x22;);
+    listenerObject.name = listenerObject.name || ("Untitled listener for [" + eventName + "] with priority [" + listenerObject.priority
+ + "]");
     return listenerObject;
   });
   listenerObjects.sort(function(a, b) {
@@ -967,7 +960,7 @@ next = arguments[_i++];
     <ul>
     <li>description and source-code<pre class="apidocCodePre">off = function () {
   var args;
-  args = 1 &#x3c;= arguments.length ? __slice.call(arguments, 0) : [];
+  args = 1 &lt;= arguments.length ? __slice.call(arguments, 0) : [];
   return this.removeListener.apply(this, args);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -1021,8 +1014,8 @@ next = arguments[_i++];
   this.domain = null;
   if (EventEmitter.usingDomains) {
     // if there is an active domain, then attach to it.
-    domain = domain || require(&#x27;domain&#x27;);
-    if (domain.active &#x26;&#x26; !(this instanceof domain.Domain)) {
+    domain = domain || require('domain');
+    if (domain.active &amp;&amp; !(this instanceof domain.Domain)) {
       this.domain = domain.active;
     }
   }
@@ -1047,7 +1040,7 @@ next = arguments[_i++];
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">listenerCount = function (emitter, type) {
-  if (typeof emitter.listenerCount === &#x27;function&#x27;) {
+  if (typeof emitter.listenerCount === 'function') {
     return emitter.listenerCount(type);
   } else {
     return listenerCount.call(emitter, type);
@@ -1094,7 +1087,7 @@ next = arguments[_i++];
     <ul>
     <li>description and source-code<pre class="apidocCodePre">emitParallel = function () {
   var args;
-  args = 1 &#x3c;= arguments.length ? __slice.call(arguments, 0) : [];
+  args = 1 &lt;= arguments.length ? __slice.call(arguments, 0) : [];
   return this.getListenerGroup.apply(this, args).setConfig({
     concurrency: 0
   }).run();
@@ -1118,7 +1111,7 @@ next = arguments[_i++];
     <ul>
     <li>description and source-code<pre class="apidocCodePre">emitSerial = function () {
   var args;
-  args = 1 &#x3c;= arguments.length ? __slice.call(arguments, 0) : [];
+  args = 1 &lt;= arguments.length ? __slice.call(arguments, 0) : [];
   return this.getListenerGroup.apply(this, args).run();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -1140,10 +1133,10 @@ next = arguments[_i++];
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getListenerGroup = function () {
   var args, eventName, listenerObjects, me, next, tasks, _i;
-  eventName = arguments[0], args = 3 &#x3c;= arguments.length ? __slice.call(arguments, 1, _i = arguments.length - 1) : (_i = 1, []),
+  eventName = arguments[0], args = 3 &lt;= arguments.length ? __slice.call(arguments, 1, _i = arguments.length - 1) : (_i = 1, []),
 next = arguments[_i++];
   me = this;
-  tasks = new TaskGroup(&#x22;EventEmitterGrouped for &#x22; + eventName).done(next);
+  tasks = new TaskGroup("EventEmitterGrouped for " + eventName).done(next);
   listenerObjects = this.listeners(eventName).slice().map(function(listener) {
     var listenerObject;
     listenerObject = {};
@@ -1155,8 +1148,8 @@ next = arguments[_i++];
       listenerObject.fire = listener.bind(me);
     }
     listenerObject.priority = listenerObject.actual.priority || 0;
-    listenerObject.name = listenerObject.name || (&#x22;Untitled listener for [&#x22; + eventName + &#x22;] with priority [&#x22; + listenerObject.priority
- + &#x22;]&#x22;);
+    listenerObject.name = listenerObject.name || ("Untitled listener for [" + eventName + "] with priority [" + listenerObject.priority
+ + "]");
     return listenerObject;
   });
   listenerObjects.sort(function(a, b) {
@@ -1188,7 +1181,7 @@ next = arguments[_i++];
     <ul>
     <li>description and source-code<pre class="apidocCodePre">off = function () {
   var args;
-  args = 1 &#x3c;= arguments.length ? __slice.call(arguments, 0) : [];
+  args = 1 &lt;= arguments.length ? __slice.call(arguments, 0) : [];
   return this.removeListener.apply(this, args);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -1210,7 +1203,7 @@ next = arguments[_i++];
     <ul>
     <li>description and source-code<pre class="apidocCodePre">create = function () {
   var args;
-  args = 1 &#x3c;= arguments.length ? slice.call(arguments, 0) : [];
+  args = 1 &lt;= arguments.length ? slice.call(arguments, 0) : [];
   return (function(func, args, ctor) {
     ctor.prototype = func.prototype;
     var child = new ctor, result = func.apply(child, args);
@@ -1236,7 +1229,7 @@ next = arguments[_i++];
     <ul>
     <li>description and source-code<pre class="apidocCodePre">createInstance = function () {
   var args;
-  args = 1 &#x3c;= arguments.length ? slice.call(arguments, 0) : [];
+  args = 1 &lt;= arguments.length ? slice.call(arguments, 0) : [];
   return (function(func, args, ctor) {
     ctor.prototype = func.prototype;
     var child = new ctor, result = func.apply(child, args);
@@ -1264,8 +1257,8 @@ next = arguments[_i++];
   this.domain = null;
   if (EventEmitter.usingDomains) {
     // if there is an active domain, then attach to it.
-    domain = domain || require(&#x27;domain&#x27;);
-    if (domain.active &#x26;&#x26; !(this instanceof domain.Domain)) {
+    domain = domain || require('domain');
+    if (domain.active &amp;&amp; !(this instanceof domain.Domain)) {
       this.domain = domain.active;
     }
   }
@@ -1295,7 +1288,7 @@ next = arguments[_i++];
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">listenerCount = function (emitter, type) {
-  if (typeof emitter.listenerCount === &#x27;function&#x27;) {
+  if (typeof emitter.listenerCount === 'function') {
     return emitter.listenerCount(type);
   } else {
     return listenerCount.call(emitter, type);
@@ -1321,8 +1314,8 @@ next = arguments[_i++];
     <li>description and source-code<pre class="apidocCodePre">require = function (relativePath) {
   var absolutePath;
   absolutePath = pathUtil.normalize(pathUtil.join(__dirname, relativePath));
-  if (absolutePath.replace(__dirname, &#x27;&#x27;) === absolutePath) {
-    throw new Error(&#x22;docpad.require is limited to local docpad files only: &#x22; + relativePath);
+  if (absolutePath.replace(__dirname, '') === absolutePath) {
+    throw new Error("docpad.require is limited to local docpad files only: " + relativePath);
   }
   return require(absolutePath);
 }</pre></li>
@@ -1356,3 +1349,4 @@ next = arguments[_i++];
     ]
 </div>
 </div>
+</body></html>
