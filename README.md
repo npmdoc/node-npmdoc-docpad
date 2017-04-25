@@ -1,4 +1,7 @@
-# api documentation for  [docpad (v6.79.4)](https://github.com/docpad/docpad)  [![npm package](https://img.shields.io/npm/v/npmdoc-docpad.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-docpad) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-docpad.svg)](https://travis-ci.org/npmdoc/node-npmdoc-docpad)
+# npmdoc-docpad
+
+#### basic api documentation for  [docpad (v6.79.4)](https://github.com/docpad/docpad)  [![npm package](https://img.shields.io/npm/v/npmdoc-docpad.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-docpad) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-docpad.svg)](https://travis-ci.org/npmdoc/node-npmdoc-docpad)
+
 #### DocPad is a dynamic static site generator. Write your content as files, or import your content from other external sources. Render the content with plugins. And deploy your static or dynamic website to your favourite hosting provider.
 
 [![NPM](https://nodei.co/npm/docpad.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/docpad)
